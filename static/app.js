@@ -17,7 +17,7 @@
 
             if (query) {
 
-                $search.val(query[1]).trigger('keyup');
+                $search.val(query[1]).triggerHandler('keyup');
 
             }
 
