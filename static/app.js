@@ -1,3 +1,5 @@
+/*globals window, $, templates */
+
 (function () {
 
     'use strict';
@@ -25,7 +27,7 @@
 
     $search.on('keyup', function () {
 
-        var query = new RegExp($(this).val().replace(/[\W]+/, '|'), 'gi');
+        query = new RegExp($(this).val().replace(/[\W]+/, '|'), 'gi');
 
         $('.repo').show().each(function () {
 
