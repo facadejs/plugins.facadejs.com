@@ -4,10 +4,14 @@
     width: 100%;
     font-family: inherit;
     font-size: 1em;
-    line-height: 1em;
+    line-height: 1.3em;
     border: 4px solid #1e1130;
     -webkit-appearance: none;
     text-indent: .25em;
+}
+
+.search::-webkit-input-placeholder {
+    font-style: italic;
 }
 
 .content li {
