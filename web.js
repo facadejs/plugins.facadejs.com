@@ -1,4 +1,5 @@
 var MongoClient = require('mongodb').MongoClient;
+var ObjectID = require('mongodb').ObjectID;
 
 var mongoURI = process.env.MONGOHQ_URL || 'mongodb://localhost:27017/plugins';
 
@@ -20,6 +21,24 @@ server.get('/api/repos', function(req, res) {
         repos.find({}, { sort: 'name' }).toArray(function (err, docs) {
 
             res.send({ count: docs.length, repos: docs });
+
+        });
+
+    } else {
+
+        res.send(500);
+
+    }
+
+});
+
+server.get('/api/repo/:id', function(req, res) {
+
+    if (repos) {
+
+        repos.findOne({ _id: new ObjectID(req.params.id) }, function (err, docs) {
+
+            res.send(docs);
 
         });
 
