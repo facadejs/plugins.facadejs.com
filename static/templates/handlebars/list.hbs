@@ -3,8 +3,18 @@
 {{#each repos}}
 
 <li class="repo">
-    <p><a href="{{url}}"><b>{{name}}</b></a> built by {{{author}}}</p>
-    <p>{{{description}}}</p>
+    <div class="info">
+        <p><a href="{{url}}"><b>{{name}}</b></a> built by {{{author}}}</p>
+        <p>{{{description}}}</p>
+    </div>
+    <div class="download">
+        {{#if download}}
+        <p><a href="{{download}}">Download</a></p>
+        {{/if}}
+        {{#if updated}}
+        <p class="updated">Last updated {{date updated}}</p>
+        {{/if}}
+    </div>
 </li>
 
 {{/each}}

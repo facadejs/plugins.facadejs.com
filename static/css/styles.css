@@ -18,3 +18,31 @@
     background-color: #eee;
     overflow: auto;
 }
+
+.repo .download .updated {
+    font-style: italic;
+    color: #444;
+}
+
+@media screen and (min-width: 600px) {
+
+    .repo {
+        display: flex;
+        align-items: center;
+    }
+
+    .repo .info,
+    .repo .download {
+        flex-grow: 1;
+    }
+
+    .repo .download {
+        flex-basis: 20em;
+        text-align: right;
+    }
+
+    .repo .download .updated {
+        font-size: .85em;
+    }
+
+}
