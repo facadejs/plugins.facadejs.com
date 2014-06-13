@@ -52,7 +52,7 @@ server.get('/api/repo/:id', function(req, res) {
 
 });
 
-server.get('/api/repo/:id/update', function(req, res) {
+server.post('/api/repo/:id/update', function(req, res) {
 
     var oauth_params = '?client_id=' + process.env.GITHUB_CLIENT_ID +
         '&client_secret=' + process.env.GITHUB_CLIENT_SECRET;
