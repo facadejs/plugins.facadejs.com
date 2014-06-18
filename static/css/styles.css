@@ -27,17 +27,20 @@
 @media screen and (min-width: 600px) {
 
     .repo {
-        display: flex;
-        align-items: center;
+        overflow: auto;
     }
 
-    .repo .info,
-    .repo .download {
-        flex-grow: 1;
+    .repo .info {
+        width: 70%;
+        float: left;
     }
 
     .repo .download {
-        flex-basis: 20em;
+        width: 30%;
+        float: right;
+    }
+
+    .repo .download {
         text-align: right;
     }
 
