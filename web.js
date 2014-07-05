@@ -62,15 +62,18 @@ server.post('/api/repo/:id/update', function(req, res) {
         repos.findOne({ _id: new ObjectID(req.params.id) }, function (err, docs) {
 
             request.get({
-                url: 'https://api.github.com/repos/' + docs.owner.name + '/' + docs.name + oauth_params, headers: {
-                'User-Agent': 'plugins.facadejs.com'
-            }, json: true }, function (e, r, body) {
+                url: 'https://api.github.com/repos/' + docs.owner.name + '/' + docs.name + oauth_params,
+                headers: {
+                    'User-Agent': 'plugins.facadejs.com'
+                },
+                json: true
+            }, function (e, r, body) {
 
                 repos.update({ _id: new ObjectID(req.params.id) }, { $set: {
                     name: body.name,
                     description: body.description,
                     url: body.html_url,
-                    updated: body.updated_at,
+                    updated: body.pushed_at,
                     owner: {
                         name: body.owner.login,
                         url: body.owner.html_url
