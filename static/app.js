@@ -27,7 +27,7 @@
 
     $search.on('keyup', function () {
 
-        query = new RegExp($(this).val().replace(/[\W]+/, '|'), 'gi');
+        query = new RegExp($(this).val().replace(/^\s+|\s+$/g, '').replace(/[\W]+/, '|'), 'gi');
 
         $('.repo').show().each(function () {
 
