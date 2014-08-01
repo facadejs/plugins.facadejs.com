@@ -4,9 +4,9 @@
     },
     "main": "web.js",
     "dependencies": {
-        "express": "4.6.1",
+        "express": "4.7.2",
         "mongodb": "1.4.7",
-        "request": "2.37.0"
+        "request": "2.39.0"
     },
     "devDependencies": {
         "grunt": "0.4.5",
