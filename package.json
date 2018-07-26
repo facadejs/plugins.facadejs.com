@@ -6,7 +6,7 @@
     "dependencies": {
         "express": "4.8.2",
         "mongodb": "1.4.8",
-        "request": "2.40.0"
+        "request": "2.84.0"
     },
     "devDependencies": {
         "grunt": "0.4.5",
